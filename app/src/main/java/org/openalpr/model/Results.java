@@ -1,30 +1,30 @@
 package org.openalpr.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Results {
 
-    private final Float epoch_time;
+    private final Double epoch_time;
 
-    private final Float processing_time_ms;
+    private final Double processing_time_ms;
 
-    private final ArrayList<Result> results;
+    private final List<Result> results;
 
-    public Results(Float epoch_time, Float processing_time_ms, ArrayList<Result> results) {
+    public Results(Double epoch_time, Double processing_time_ms, List<Result> results) {
         this.epoch_time = epoch_time;
         this.processing_time_ms = processing_time_ms;
         this.results = results;
     }
 
-    public Float getEpoch_time() {
+    public Double getEpochTime() {
         return epoch_time;
     }
 
-    public Float getProcessing_time_ms() {
+    public Double getProcessingTimeMs() {
         return processing_time_ms;
     }
 
-    public ArrayList<Result> getResults() {
+    public List<Result> getResults() {
         return results;
     }
 

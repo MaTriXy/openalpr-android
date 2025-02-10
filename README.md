@@ -1,6 +1,7 @@
-# openalpr-android [![Release](https://img.shields.io/github/release/SandroMachado/openalpr-android.svg?label=jitpack)](https://jitpack.io/#SandroMachado/openalpr-android)
+# openalpr-android
+[![Release](https://jitpack.io/v/SandroMachado/openalpr-android.svg)](https://jitpack.io/#SandroMachado/openalpr-android)
 
-OpenALPR is an open source Automatic License Plate Recognition library written in C++ with bindings in C#, Java, Node.js, and Python. This project ports this library to Android.
+OpenALPR is an open source Automatic License Plate Recognition library written in C++ with bindings in C#, Java, Node.js, and Python. This project ports this library to Android. You can find the demo application `apk` at the [releases](https://github.com/SandroMachado/openalpr-android/releases) tab.
 
 ![Screenshot](images/screenshot.png "Main Activity Sample application")
 
@@ -22,7 +23,7 @@ Them include the openalpr-android dependency:
 dependencies {
 
     // ... other dependencies here.    	
-    compile 'com.github.SandroMachado:openalpr-android:1.0.1'
+    compile 'com.github.SandroMachado:openalpr-android:1.1.2'
 }
 ```
 
@@ -30,7 +31,7 @@ dependencies {
 
 ## Code
 
-Copy the [OpenALPR configuration file](./openalpr.conf) to your android project assets directory `/main/assets/runtime_data/openalpr.conf` and update the `runtime_dir` to your project directory (for instance, for the sample project the directory is: `runtime_dir = /data/data/com.sandro.openalprsample/runtime_data`). After that just follow the code example bellow. To see a full example check the [sample application](./Sample/OpenALPRSample/app/src/main/java/com/sandro/openalprsample/MainActivity.java).
+Copy the [OpenALPR configuration file](./openalpr.conf) to your android project assets directory `/main/assets/runtime_data/openalpr.conf`, open it and update the `runtime_dir` to your project directory (for instance, for the sample project the directory is: `runtime_dir = /data/data/com.sandro.openalprsample/runtime_data`). After that just follow the code example bellow. To see a full example check the [sample application](./Sample/OpenALPRSample/app/src/main/java/com/sandro/openalprsample/MainActivity.java).
 
 ```Java
 
@@ -59,7 +60,7 @@ String result = OpenALPR.Factory.create(MainActivity.this, ANDROID_DATA_DIR).rec
  *
  * @return - JSON string of results
  */
- 
+
 public String recognizeWithCountryRegionNConfig(String country, String region, String configFilePath, String imgFilePath, int topN);
 
 ```
@@ -71,7 +72,5 @@ The repository also includes a [sample application](./Sample/OpenALPRSample) tha
 
 # Credits
 
- - [https://github.com/openalpr/openalpr](https://github.com/openalpr/openalpr) (the project repository)
- - [https://github.com/sujaybhowmick/OpenAlprDroidApp](https://github.com/sujaybhowmick/OpenAlprDroidApp) (for the compiled sources and for the sample that helped me to port the project to an android library)
-
-
+ - [OpenALPR](https://github.com/openalpr/openalpr) Parent Project
+ - [OpenAlprDroidApp](https://github.com/sujaybhowmick/OpenAlprDroidApp) for the compiled sources and sample that helped port the project to an android library
